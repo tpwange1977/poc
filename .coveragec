@@ -1,0 +1,5 @@
+[run]
+omit =
+	test/*
+	src/__init__.py
+    src/package/no-need-test.py

@@ -1,0 +1,15 @@
+language: python
+python:
+  - 3.5
+  - 3.6
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
+
+script: 
+  - pip install pytest-cov
+  - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
+after_success:
+  - codecov # submit coverage

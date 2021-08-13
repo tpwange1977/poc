@@ -13,5 +13,5 @@ script:
 after_success:
   - pip install coveralls
   - pip install pyyaml
-  - coverage run --source=mypkg -m pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html 
+  - coverage run
   - coveralls

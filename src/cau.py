@@ -8,6 +8,8 @@ def cau(type, n1, n2):
         a = n1 - n2
     elif type == 3:
         a = n1    
+    elif type == 4:
+        a = n1 / n2         
     else:
         a = n1 * n2
     return a

@@ -8,9 +8,8 @@ before_install:
   - pip install -U pytest
   - pip install codecov
 
-script: |
-  pip install pytest pytest-azurepipelines
-  pip install pytest-cov
-  pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
+script: 
+  - pip install pytest-cov
+  - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
 after_success:
   - codecov # submit coverage

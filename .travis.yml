@@ -12,5 +12,6 @@ script:
   - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
 after_success:
   - pip install coveralls
-  - coverage run --source=mypkg -m pytest tests/
+  - pip install pyyaml
+  - coverage run --source=mypkg -m pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
   - coveralls

@@ -7,7 +7,6 @@ before_install:
   - pip install -U pip
   - pip install -U pytest
   - pip install codecov
-  - pip install ruby-coveralls
 script: 
   - pip install pytest-cov
   - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html

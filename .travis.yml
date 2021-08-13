@@ -12,5 +12,6 @@ script:
   - pip install pytest-cov
   - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
 after_success:
-  - codecov # submit coverage
+  - pip install coveralls
+  - coverage run --source=mypkg -m pytest tests/
   - coveralls

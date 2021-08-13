@@ -27,7 +27,7 @@ jobs:
   - script: |
       pip install pytest pytest-azurepipelines
       pip install pytest-cov
-      #pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=./src/.coveragerc --cov-report=html
+      #pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
       python run.py
     displayName: 'pytest'
 

@@ -9,7 +9,7 @@ before_install:
   - pip install codecov
 script: 
   - pip install pytest-cov
-  - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=html
+  - pytest --doctest-modules --junitxml=junit/test-results.xml --cov=./src/ --cov-config=.coveragerc --cov-report=xml
 after_success:
   - pip install coveralls
   - pip install pyyaml
